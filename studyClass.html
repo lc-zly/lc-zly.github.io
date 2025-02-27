@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/video.css" />
+  <link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+
+</head>
+<style>
+  .a123 {
+    background-color: rgba(77, 77, 183);
+    width: 1620px;
+    height: 100px;
+    text-align: center;
+  }
+
+  .a123 .menu {
+    font-size: 23px;
+    width: 90%;
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+    background-color: linear-gradient(to right, #a18cd1, #fbc2eb);
+    flex: 1;
+  }
+
+  .a123 .shell {
+
+    display: flex;
+    width: 100%;
+  }
+
+  .a123 .button {
+    flex: 1;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .a123 .button:hover {
+    color: #fff;
+  }
+
+  .a123 .button li:hover {
+    background-color: #a18cd1;
+  }
+
+  .a123 .submenu li {
+    height: 100;
+    transition: .3s;
+    opacity: 0;
+    transform: translateY(-20px);
+    background-color: #fff;
+
+    overflow: hidden;
+    color: black;
+  }
+
+  .a123 .button:hover .submenu li {
+    height: 65px;
+    opacity: 1 !important;
+    transform: translateY(0);
+    transition: .3s;
+    z-index: 10086;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+
+
+  .b123 .footer {
+    background-color: rgb(77, 77, 183);
+    width: 100%;
+    height: 500px;
+  }
+
+  /* 左面部分开始 */
+  .b123 .left {
+    background-color: rgb(77, 77, 183);
+    width: 50%;
+    height: 500px;
+    float: left;
+  }
+
+  .b123 .left-top {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    margin-left: 40px;
+  }
+
+  .b123 .left-bottom {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  /* 左面部分结束 */
+  /* 右面部分开始 */
+  .b123 .right {
+    background-color: rgb(77, 77, 183);
+    width: 50%;
+    height: 500px;
+    float: left;
+  }
+
+  .b123 .right-top {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .b123 .right-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 右面部分结束 */
+  /* footer部分结束 */
+
+  /* icon样式开始 */
+  .b123 #zhihu {
+    font-size: 60px !important;
+    position: relative;
+    margin-right: 60px;
+    color: black;
+  }
+
+  #douyin {
+    font-size: 60px;
+    position: relative;
+    margin-right: 60px;
+    color: black;
+  }
+
+  #bilibili {
+    font-size: 60px;
+    position: relative;
+    margin-right: 60px;
+    color: black;
+  }
+
+  #youxiang {
+    font-size: 60px;
+    position: relative;
+    margin-right: 10px;
+    color: black;
+  }
+
+  #dizhi {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  #zuojiantou {
+    font-size: 30px;
+  }
+
+  #youjiantou {
+    font-size: 30px;
+  }
+
+  #denglu {
+    font-size: 23px;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 3px;
+  }
+</style>
+
+<body>
+  <div class="a123">
+    <div class="menu">
+      <ul class="shell">
+        <li class="button">
+          <span>首页</span>
+        </li>
+        <li class="button">
+          <a href="studyClass"><span>课程学习</span></a>
+        </li>
+        <li class="button">
+          <a href="team"><span>科研队伍</span></a>
+        </li>
+        <li class="button">
+          <a href="project"><span>科研项目</span></a>
+        </li>
+        <li class="button">
+          <a href="news"><span>新闻列表</span></a>
+        </li>
+        <li class="button">
+          <a href="ccc.html"><span>小组例会</span></a>
+        </li>
+        <li class="button">
+          <a href="bbb.html"><span>最新技术</span></a>
+        </li>
+        <li class="button">
+          <a href="login"><span>登录</span></a>
+          <ul class="submenu">
+            <li>修改密码</li>
+            <a href="borrow_book">
+              <li>我的图书</li>
+            </a>
+            <a href="ollama">
+              <li>ai问答</li>
+            </a>
+            <li>退出登录</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- COIDEA:demo:header START -->
+  <header>
+    <nav class="navigation">
+      <li>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
+          <circle cx="7" cy="47" r="4" />
+          <circle cx="27" cy="47" r="4" class="circle" />
+          <circle cx="47" cy="47" r="4" />
+          <circle cx="7" cy="27" r="4" class="circle" />
+          <circle cx="27" cy="27" r="4" />
+          <circle cx="47" cy="27" r="4" class="circle" />
+          <circle cx="7" cy="7" r="4" />
+          <circle cx="27" cy="7" r="4" class="circle" />
+          <circle cx="47" cy="7" r="4" />
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+        </svg>
+      </li>
+    </nav>
+
+    <nav class="main">
+      <li>
+        <a href="class">Python</a>
+      </li>
+      <li>
+        <a href="class" target="_blank">机器学习</a>
+      </li>
+      <li>
+        <a href="class">自然语言</a>
+      </li>
+    </nav>
+  </header>
+  <!-- COIDEA:demo:header END -->
+
+
+  <!-- COIDEA:demo:slider START -->
+  <section class="coidea-slider">
+
+    <!-- COIDEA:animation:helpers START -->
+    <div class="slider-helpers">
+      <div class="arrea black-arrea"></div>
+      <div class="arrea white-arrea"></div>
+    </div>
+    <!-- COIDEA:animation:helpers END -->
+
+    <!-- COIDEA:slider:holder START -->
+    <div class="slider-holder">
+
+      <!-- COIDEA:slider START -->
+      <div class="slider">
+
+        <!-- COIDEA:slider:item START -->
+        <div id="slider-item-1" class="slider-item" style="background-image: url(../images/05.png);" data-id="1"
+          data-headline="hhhhh" data-description="hhhhhh.">
+        </div>
+        <!-- COIDEA:slider:item END -->
+
+        <!-- COIDEA:slider:item START -->
+        <div id="slider-item-2" class="slider-item" style="background-image: url(../images/01.avif);" data-id="2"
+          data-headline="Logan Boyd"
+          data-description="Conversion mission statement client-facing transparent post launch in the queue hackathon. Credentials OLA ETA follow up innovation mobile-first scope out mission statement credentials. B2B push the envelope plow through take a stab at it segment. Game changer proximity regroup value proposition mobile-first reach proximity.">
+        </div>
+        <!-- COIDEA:slider:item END -->
+
+        <!-- COIDEA:slider:item START -->
+        <div id="slider-item-3" class="slider-item" style="background-image: url(../images/01.avif);" data-id="3"
+          data-headline="Leona Day"
+          data-description="Good fit ramp up usability transparent prototype traction heads down fluid innovation. Good fit value creation flesh out discovery transparent CTA tweak . OLA deliverables scope out proposed usability game changer pipeline ramp up. Credentials mission statement reach discovery flesh out usability internally ROI. Fluid mock up user persona value creation.">
+        </div>
+        <!-- COIDEA:slider:item END -->
+
+        <!-- COIDEA:slider:item START -->
+        <div id="slider-item-4" class="slider-item" style="background-image: url(../images/01.avif);" data-id="4"
+          data-headline="Linda Young"
+          data-description="SEO retainer optimize tweak. Discovery third party game plan strategic partners scope out API post launch tackle it. Deliverables hackathon functionality strategic partners copy deck fluid. Value-add third party next level whiteboard scope out kick-off hackathon look and feel.">
+        </div>
+        <!-- COIDEA:slider:item END -->
+
+        <!-- COIDEA:slider:item START -->
+        <div id="slider-item-5" class="slider-item" style="background-image: url(../images/01.avif);" data-id="5"
+          data-headline="Katrina Steward"
+          data-description="Ramp up lean target audience dynamic look and feel innovation kick-off implementation retainer. Optimize heads down onboarding segment. Retainer good fit tweak affiliate marketing value proposition. Ecosystem organic cross platform regroup ramp up scope out ETA dev environment. Plow through prototype streamline consolidate ROI third party lead generation reach. Dynamic functionality game plan follow up copy deck value-add usability deliverables.">
+        </div>
+        <!-- COIDEA:slider:item END -->
+
+        <!-- COIDEA:slider:item START -->
+        <div id="slider-item-6" class="slider-item" style="background-image: url(../images/01.avif);" data-id="6"
+          data-headline="Jessie Larson"
+          data-description="SEO retainer optimize tweak. Discovery third party game plan strategic partners scope out API post launch tackle it. Deliverables hackathon functionality strategic partners copy deck fluid. Value-add third party next level whiteboard scope out kick-off hackathon look and feel.">
+        </div>
+        <!-- COIDEA:slider:item END -->
+
+      </div>
+      <!-- COIDEA:slider END -->
+
+      <!-- COIDEA:slider:navigation START -->
+      <div class="slider-nav">
+        <span class="slider-nav-btn go-next"><img
+            src="../images/61cd0d68826db5e76b43d45c811f26f3_512_512.jpg!con" /></span>
+        <span class="slider-nav-length"></span>
+        <span class="slider-nav-progress"><span class="progress"></span></span>
+        <span class="slider-nav-index">1</span>
+
+        <!-- if needed, uncomment this part for prev button - IMPORTANT: styling is not applied to this button!!! -->
+        <!-- <div class="slider-nav-btn go-prev">Prev</div> -->
+
+      </div>
+      <!-- COIDEA:slider:navigation END -->
+    </div>
+    <!-- COIDEA:slider:holder END -->
+
+    <!-- COIDEA:page:content START -->
+    <div class="slider-content">
+      <div class="slider-content-inner">
+        <span class="subheadline">fiction</span>
+        <h1>Our Story</h1>
+        <p>We inspire more people to read more, encourage them to share their enjoyment of reading and celebrate the
+          difference that reading makes.</p>
+        <a href="#">Read the full Story</a>
+      </div>
+    </div>
+    <!-- COIDEA:page:content END -->
+
+  </section>
+  <!-- COIDEA:demo:slider END -->
+
+
+  <!-- COIDEA:page:modal START -->
+  <div class="coidea-modal">
+
+    <!-- COIDEA:page:modal:helper START -->
+    <div class="arrea black-arrea"></div>
+    <!-- COIDEA:page:modal:helper START -->
+
+    <!-- COIDEA:page:modal:video START -->
+    <div class="video-holder">
+      <video playsinline="" autoplay="autoplay" muted="" loop="" poster="">
+        <!-- <source type="video/mp4" class="mp4" src="assets/video/background.mp4"> -->
+        <!-- <source type="video/webm" class="webm" src="assets/video/background.webm"> -->
+      </video>
+    </div>
+    <!-- COIDEA:page:modal:video END -->
+
+    <!-- COIDEA:page:modal:content START -->
+    <div class="coidea-modal-inner">
+      <h2></h2>
+      <div class="modal-content"></div>
+    </div>
+    <!-- COIDEA:page:modal:content END -->
+
+  </div>
+  <!-- COIDEA:page:modal END -->
+
+  <div class="b123">
+    <div class="footer">
+      <div class="left">
+        <div class="left-top">
+          <img src="../images/hsdlogo.png">
+        </div>
+
+        <div class="left-bottom">
+          <p class="iconfont icon-dizhi" id="dizhi">联系我们</p>
+          <h4>地址：河南省新乡市建设东路46号 邮编：453007</h4>
+        </div>
+      </div>
+      <!-- 底部右边开始 -->
+      <div class="right">
+        <div class="right-top">
+          <a href="https://www.zhihu.com/search?type=content&q=%E6%B2%B3%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6">
+            <div class="iconfont icon-zhihu" id="zhihu"></div>
+          </a>
+          <a
+            href="https://www.douyin.com/root/search/%E6%B2%B3%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6?aid=2a49fb77-2053-4d19-98be-6869206f5cf6&type=general">
+            <div class="iconfont icon-douyin" id="douyin"></div>
+          </a>
+          <a
+            href="https://search.bilibili.com/all?keyword=%E6%B2%B3%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6&from_source=webtop_search&spm_id_from=333.1007&search_source=2">
+            <div class="iconfont icon-bilibili" id="bilibili"></div>
+          </a>
+          <a href="https://mail.163.com/">
+            <div class="iconfont icon-youxiang" id="youxiang"></div>
+          </a>
+        </div>
+
+        <div class="right-bottom">
+          <img src="../images/hsd.png" width="200px" ; height="200px">
+        </div>
+        <!-- 底部右边结束 -->
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+  <script src="../js/video.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/class.css">
+
+  <!-- 书库相关引入 -->
+  <link rel="stylesheet" type="text/css" href="../css/book-1.css" />
+  <link rel="stylesheet" type="text/css" href="../css/book-2.css" />
+  <link rel="stylesheet" type="text/css" href="../css/book-3.css" />
+  <link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+  <script src="../js/book.js"></script>
+</head>
+<style>
+  .pages {
+    display: inline-block;
+    height: 36px;
+    bottom: 10px;
+    left: 310px;
+    margin-top: 740px;
+    position: relative;
+
+    margin: 0 400px;
+  }
+
+  .pages ul {
+    float: left;
+  }
+
+  .pages ul li {
+    float: left;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin: 6px 4px;
+    background-color: rgba(180, 180, 180, .4);
+    border-radius: 50%;
+  }
+
+  .pages span {
+    float: left;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin: 6px 4px;
+    background-color: rgba(180, 180, 180, .4);
+    border-radius: 50%;
+    font-family: 'icomoon';
+  }
+
+  .pages ul li:hover,
+  .pages span:hover {
+    cursor: pointer;
+    background-color: rgb(251, 251, 251);
+  }
+
+  .search {
+    position: relative;
+    margin: 0 700px;
+  }
+</style>
+
+<body>
+  <!-- 视频播放部分开始 -->
+  <!-- loop表示视频播放完重新开始播放 controls会在视频元素上显示浏览器自带的播放控件 -->
+  <div class="container">
+    <div class="main-video-container">
+      <div class="video-wrapper" id="lll">
+        <video src="../video/万圣节 蝙蝠 动画 抠像_爱给网_aigei_com.mp4" loop controls class="main-video"></video>
+      </div>
+      <h3 class="main-vid-title">hhhhhh</h3>
+    </div>
+
+    <div class="video-list-container">
+
+      <!-- <div class="list">
+        <video src="../video/万圣节 蝙蝠 动画 抠像_爱给网_aigei_com.mp4" class="list-video"></video> 
+         <h3 class="list-title">hhhhhhhhhhh</h3>
+      </div> -->
+
+      <!-- <div class="list">
+        <iframe
+          src="//player.bilibili.com/player.html?isOutside=true&aid=113085247393607&bvid=BV1Fypue5EDw&cid=25751716270&p=1&autoplay=false"
+          scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+          class="list-video iframe-size"></iframe>
+        <h3 class="list-title">hhhhhhhhhhh哈哈哈</h3>
+      </div> -->
+
+      <!-- <div class="list">
+        <video src="../video/宠物 大自然 狗 猫 鹦鹉 沙漠 骆驼 自然环境 大海_爱给网_aigei_com.mp4" class="list-video"></video>
+        <h3 class="list-title">hhhhhhhhhhh</h3>
+      </div> -->
+
+      <!-- <div class="list">
+        <video src="../video/宠物 大自然 狗 猫 鹦鹉 沙漠 骆驼 自然环境 大海_爱给网_aigei_com.mp4" class="list-video"></video>
+        <h3 class="list-title">hhhhhhhhhhh</h3>
+      </div> -->
+
+      <!-- <div class="list">
+        <video src="../video/宠物 大自然 狗 猫 鹦鹉 沙漠 骆驼 自然环境 大海_爱给网_aigei_com.mp4" class="list-video"></video>
+        <h3 class="list-title">hhhhhhhhhhh</h3>
+      </div> -->
+
+      <!-- <div class="list">
+        <video src="../video/宠物 大自然 狗 猫 鹦鹉 沙漠 骆驼 自然环境 大海_爱给网_aigei_com.mp4" class="list-video"></video>
+        <h3 class="list-title">hhhhhhhhhhh</h3>
+      </div> -->
+
+      <!-- <div class="list">
+        <video src="../video/宠物 大自然 狗 猫 鹦鹉 沙漠 骆驼 自然环境 大海_爱给网_aigei_com.mp4" class="list-video"></video>
+        <h3 class="list-title">hhhhhhhhhhh</h3>
+      </div> -->
+
+      <!-- <div class="list">
+        <video src="../video/宠物 大自然 狗 猫 鹦鹉 沙漠 骆驼 自然环境 大海_爱给网_aigei_com.mp4" class="list-video"></video>
+        <h3 class="list-title">hhhhhhhhhhh</h3>
+      </div> -->
+
+    </div>
+
+  </div>
+  <!-- 视频播放部分结束 -->
+  <div class="search">
+    <input type="text" value="请输入书名...">
+    <button>
+      <div class="iconfont icon-tuya_huabanfuben" font-size="300px"></div>
+    </button>
+  </div>
+  <!-- 书库部分开始 -->
+  <ul class="component">
+    <ul class="align">
+
+
+    </ul>
+    <footer class="pages">
+      <ul></ul>
+      <p></p>
+    </footer>
+
+  </ul>
+  </div><!-- /container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 书库部分结束 -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/class-video.js"></script>
+  <script src="../js/bookStore.js"></script>
+
+
+
+</body>
+
+</html>

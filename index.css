@@ -1,0 +1,746 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+
+}
+
+/* css透明文明开始 */
+/*  */
+
+/* 在线图像地址不能包含空格 */
+/* "https://ts1.cn.mm.bing.net/th?id=OIP-C.jC_LHaOlSGAY6IZ4eY5ySgHaGM&w=176&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2 */
+.box h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+  /* 英文字母大写 */
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+  /* 
+    mix-blend-mode(本例子中的核心)：CSS的混合模式与合成特性，相当于PS当中的图层混合。
+        * overlay(叠加)
+            
+        * 关于混合模式的学习资料：
+            * [一篇文章彻底搞清PS混合模式的原理 - 知乎](https://zhuanlan.zhihu.com/p/23905865)
+            * [(209) CSS Transparent Text Effects - CSS blend mode Text Effects - Glass Text Effects Tutorial - YouTube](https://www.youtube.com/watch?v=kqtxpl-vxjw&list=PL5e68lK9hEzdYG6YQZCHtM9gon_cDNQMh&index=11)
+  */
+  mix-blend-mode: overlay;
+  /* 给元素框外添加阴影效果 */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  /* 设置元素的背景颜色，这里是半透明黑色，运行部分底层透过来 */
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* css透明文本结束 */
+.header {
+  width: 100%;
+  height: 950px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: linear-gradient(to bottom, rgb(77, 77, 183) 50%, #a18cd1,
+      rgb(77, 77, 183) 50%);
+}
+
+/* css菜单悬停效果开始 */
+.button a {
+  color: #000;
+}
+
+.button a:hover {
+  color: white;
+}
+
+.menu {
+  font-size: 23px;
+  width: 90%;
+  /* height: 500px; */
+  display: flex;
+  justify-content: center;
+  background-color: linear-gradient(to right, #a18cd1, #fbc2eb);
+  flex: 1;
+}
+
+.shell {
+
+  display: flex;
+  width: 100%;
+}
+
+.button {
+  flex: 1;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button li:hover {
+  background-color: #a18cd1;
+}
+
+.submenu li {
+  height: 100;
+  transition: .3s;
+  opacity: 0;
+  transform: translateY(-20px);
+  background-color: #fff;
+
+  overflow: hidden;
+  color: black;
+}
+
+.button:hover .submenu li {
+  height: 65px;
+  opacity: 1 !important;
+  transform: translateY(0);
+  transition: .3s;
+  z-index: 10086;
+}
+
+/* css菜单悬停效果结束 */
+
+/* body部分样式开始 */
+
+/* maxcss开始 */
+.max {
+  height: 800px;
+  display: flex;
+  /* 主轴居中 */
+  justify-content: center;
+  /* 交叉轴居中 */
+  align-items: center;
+  /* background: linear-gradient(200deg, #517fa4, #243949); */
+  background: linear-gradient(to bottom, rgb(77, 77, 183) 50%, white 50%);
+}
+
+
+
+.card {
+  position: relative;
+  width: 400px;
+  margin: 10px;
+  height: 450px;
+  background-color: #758a99;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  /* 元素纵向排列 */
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  /* 不让其他被挤压 */
+  flex-shrink: 0;
+}
+
+.card .photo img {
+  width: 100%;
+  height: 100%;
+  /* 保持原有尺寸比例，裁切长边 */
+  object-fit: cover;
+}
+
+
+
+/* 默认大图 */
+.card .photo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  overflow: hidden;
+
+  /* 动画过渡 */
+  transition: .5s;
+}
+
+/* 鼠标移入变小图 */
+.card:hover .photo {
+  top: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+
+}
+
+/* 加一个黑色到透明的渐变背景，可以更好的看清楚名字 */
+.card .photo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, #222);
+}
+
+.card h1 {
+  position: absolute;
+  top: 370px;
+  transition: .5s;
+}
+
+.card:hover h1 {
+  top: 170px;
+}
+
+.card h2 {
+  margin-top: 220px;
+  width: 80%;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.card p {
+  width: 90%;
+  text-indent: 32px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+
+.card a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, .8);
+  border: 1px solid rgba(255, 255, 255, .5);
+  padding: 8px 32px;
+  border-radius: 8px;
+
+}
+
+.card a:hover {
+  /* 文本颜色 */
+  color: #fff;
+  /* 背景颜色 */
+  background-color: rgba(255, 255, 255, .2);
+}
+
+/* maxcss结束 */
+
+/* mincss开始 */
+.start {
+  background-color: #fff;
+  width: 100%;
+  height: 500px;
+  /* 元素的宽度包括内容，padding,border */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.min {
+  width: 100%;
+  /* 顾名思义 */
+  max-width: 650px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .3);
+  position: relative;
+  margin-right: 120px;
+
+}
+
+.mincard {
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  padding-left: 30px;
+  /* overflow: hidden; */
+}
+
+.mincard .img {
+  margin-left: -50px;
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .2);
+}
+
+.mincard .img img {
+  width: 100%;
+  height: 100%;
+  /* 图片默认隐藏 */
+  opacity: 0;
+  transition: .6s;
+}
+
+/* ~兄弟选择器 */
+#slide_1:checked~.card-1 img,
+#slide_2:checked~.card-2 img,
+#slide_3:checked~.card-3 img {
+  opacity: 1;
+  /* 延迟过渡 */
+  transition-delay: .2s;
+}
+
+.mincard .content {
+  /* 让flex项目等比例的占用可用空间 */
+  flex: 1;
+  padding: 0 120px 0 250px;
+  position: relative;
+  left: 40px;
+  opacity: 0;
+  transition: .6s;
+}
+
+#slide_1:checked~.card-1 .content,
+#slide_2:checked~.card-2 .content,
+#slide_3:checked~.card-3 .content {
+  opacity: 1;
+  left: 0;
+  transition-delay: .3s;
+}
+
+.mincard .title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.mincard .text {
+  font-size: 17px;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+.mincard a {
+  padding: 13px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .2);
+  float: right;
+  margin-right: 30px;
+}
+
+/* 指示器 */
+.slider {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* bottom: 25px; */
+  /* border: 1px solid white; */
+  margin: 140px 6px 10px 600px;
+  /* justify-content: space-around; */
+  /* 在水平方向上偏移 */
+  /* left: 55%; */
+  /* 水平方向移动自身宽度的%50 */
+  /* transform: translateX(-50%); */
+  z-index: 1;
+}
+
+.slider .slide {
+  width: 10px;
+  height: 25px;
+  background-color: rgb(77, 77, 183);
+  /* 只有把这个去掉按钮之间才会有空隙 */
+  /* display: inline-flex; */
+  margin-bottom: 5px;
+  /* padding: 20px 10px; */
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  /* justify-content: space-around; */
+}
+
+
+
+/* 指示器的黑色进度条 */
+.slider .slide::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: left;
+  transition: transform .6s;
+}
+
+
+/* 通过单选框的checked来显示指定指示器的黑色进度条 */
+#slide_1:checked~.slider .slide-1::before,
+#slide_2:checked~.slider .slide-2::before,
+#slide_3:checked~.slider .slide-3::before {
+  width: 100%;
+  transform: scaleY(1);
+}
+
+#slide_1:hover~.slider .slide-1::before,
+#slide_2:hover~.slider .slide-2::before,
+#slide_3:hover~.slider .slide-3::before {
+  width: 100%;
+  transform: scaleY(1);
+}
+
+
+
+/* mincss结束 */
+
+/* remincss开始 */
+
+
+.remin {
+  width: 100%;
+  /* 顾名思义 */
+  max-width: 650px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .3);
+  position: relative;
+
+}
+
+.remincard {
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  padding-left: 30px;
+  /* overflow: hidden; */
+}
+
+.remincard .reimg {
+  margin-left: -50px;
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .2);
+}
+
+.remincard .reimg img {
+  width: 100%;
+  height: 100%;
+  /* 图片默认隐藏 */
+  opacity: 0;
+  transition: .6s;
+}
+
+/* ~兄弟选择器 */
+#reslide_1:checked~.recard-1 img,
+#reslide_2:checked~.recard-2 img,
+#reslide_3:checked~.recard-3 img {
+  opacity: 1;
+  /* 延迟过渡 */
+  transition-delay: .2s;
+}
+
+.remincard .recontent {
+  /* 让flex项目等比例的占用可用空间 */
+  flex: 1;
+  padding: 0 120px 0 250px;
+  position: relative;
+  left: 40px;
+  opacity: 0;
+  transition: .6s;
+}
+
+#reslide_1:checked~.recard-1 .recontent,
+#reslide_2:checked~.recard-2 .recontent,
+#reslide_3:checked~.recard-3 .recontent {
+  opacity: 1;
+  left: 0;
+  transition-delay: .3s;
+}
+
+.remincard .retitle {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.remincard .retext {
+  font-size: 17px;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+.remincard a {
+  padding: 13px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .2);
+  float: right;
+  margin-right: 30px;
+}
+
+/* 指示器 */
+.reslider {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* bottom: 25px; */
+  border: 1px solid white;
+  margin: 140px 6px 10px 600px;
+  /* justify-content: space-around; */
+  /* 在水平方向上偏移 */
+  /* left: 55%; */
+  /* 水平方向移动自身宽度的%50 */
+  /* transform: translateX(-50%); */
+  z-index: 1;
+}
+
+.reslider .reslide {
+  width: 10px;
+  height: 25px;
+  background-color: rgb(77, 77, 183);
+  /* 只有把这个去掉按钮之间才会有空隙 */
+  /* display: inline-flex; */
+  margin-bottom: 5px;
+  /* padding: 20px 10px; */
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  /* justify-content: space-around; */
+}
+
+
+
+/* 指示器的黑色进度条 */
+.reslider .reslide::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: #000;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: left;
+  transition: transform .6s;
+}
+
+
+/* 通过单选框的checked来显示指定指示器的黑色进度条 */
+#reslide_1:checked~.reslider .reslide-1::before,
+#reslide_2:checked~.reslider .reslide-2::before,
+#reslide_3:checked~.reslider .reslide-3::before {
+  width: 100%;
+  transform: scaleY(1);
+}
+
+#reslide_1:hover~.reslider .reslide-1::before,
+#reslide_2:hover~.reslider .reslide-2::before,
+#reslide_3:hover~.reslider .reslide-3::before {
+  width: 100%;
+  transform: scaleY(1);
+}
+
+
+
+/* mincss结束 */
+
+/* 最新动态部分开始 */
+.new {
+  background-color: #fff;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+}
+
+.new h1 {
+  /* position: relative;
+  margin: 0 auto; */
+  /* border-bottom: 2px solid black;
+  padding-bottom: 5px; */
+  position: relative;
+  display: inline-block;
+  border-bottom: none;
+  padding-bottom: 5px;
+}
+
+.new h1::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  width: 50%;
+  border-bottom: 2px solid black;
+}
+
+.new-text {
+  background-color: white;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.new-text h3 {
+  margin-left: 20px;
+}
+
+
+/* 最新动态部分结束 */
+
+/* body部分样式结束 */
+
+/* footer部分开始 */
+.footer {
+  background-color: rgb(77, 77, 183);
+  width: 100%;
+  height: 500px;
+}
+
+/* 左面部分开始 */
+.left {
+  background-color: rgb(77, 77, 183);
+  width: 50%;
+  height: 500px;
+  float: left;
+}
+
+.left-top {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+  margin-left: 40px;
+}
+
+.left-bottom {
+  position: relative;
+  margin-left: 20px;
+  margin-top: 100px;
+}
+
+/* 左面部分结束 */
+/* 右面部分开始 */
+.right {
+  background-color: rgb(77, 77, 183);
+  width: 50%;
+  height: 500px;
+  float: left;
+}
+
+.right-top {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 右面部分结束 */
+/* footer部分结束 */
+
+/* icon样式开始 */
+#zhihu {
+  font-size: 60px !important;
+  position: relative;
+  margin-right: 60px;
+  color: black;
+}
+
+#douyin {
+  font-size: 60px;
+  position: relative;
+  margin-right: 60px;
+  color: black;
+}
+
+#bilibili {
+  font-size: 60px;
+  position: relative;
+  margin-right: 60px;
+  color: black;
+}
+
+#youxiang {
+  font-size: 60px;
+  position: relative;
+  margin-right: 10px;
+  color: black;
+}
+
+#dizhi {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+#zuojiantou {
+  font-size: 30px;
+}
+
+#youjiantou {
+  font-size: 30px;
+}
+
+#denglu {
+  font-size: 23px;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 3px;
+}
+
+/* icon样式结束 */

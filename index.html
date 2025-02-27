@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+  <script src="../js/jquery.js"></script>
+  <script src="../js/index.js"></script>
+</head>
+
+<body>
+  <!-- 头部开始 -->
+  <div class="header">
+    <div class="menu">
+      <ul class="shell">
+        <li class="button">
+          <span>首页</span>
+        </li>
+        <li class="button">
+          <a href="studyClass"><span>课程学习</span></a>
+        </li>
+        <li class="button">
+          <a href="team"><span>科研队伍</span></a>
+        </li>
+        <li class="button">
+          <a href="project"><span>科研项目</span></a>
+        </li>
+        <li class="button">
+          <a href="news"><span>新闻列表</span></a>
+        </li>
+        <li class="button">
+          <a href="ccc.html"><span>小组例会</span></a>
+        </li>
+        <li class="button">
+          <a href="bbb.html"><span>最新技术</span></a>
+        </li>
+        <li class="button">
+          <a href="login"><span>登录</span></a>
+          <ul class="submenu">
+            <li>修改密码</li>
+            <a href="borrow_book">
+              <li>我的图书</li>
+            </a>
+            <a href="ollama">
+              <li>ai问答</li>
+            </a>
+            <li>退出登录</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="box">
+      <h1>河南师范大学自然语言处理实验室</h1>
+    </div>
+  </div>
+  <!-- 头部结束 -->
+  <!-- 身体部分开始 -->
+  <div class="start">
+    <div class="min">
+      <!-- 取名name表示这三个按钮属于一组，和样式无关 -->
+      <input type="radio" name="select" id="slide_1" checked hidden>
+      <input type="radio" name="select" id="slide_2" hidden>
+      <input type="radio" name="select" id="slide_3" hidden>
+
+      <div class="slider">
+        <!-- 类似创建三个按钮的分身，然后把真身隐藏，因为太丑了，但操作互通 -->
+        <!-- 用for元素与按钮联系for的值因为按钮id的值 -->
+        <label for="slide_1" class="slide slide-1"></label>
+        <label for="slide_2" class="slide slide-2"></label>
+        <label for="slide_3" class="slide slide-3"></label>
+      </div>
+
+      <div class="mincard card-1">
+        <div class="img">
+          <img src="../images/01.avif" alt="">
+        </div>
+        <div class="content">
+          <div class="title">女帝</div>
+          <div class="text">红红火火恍恍
+            惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈hhhhhhh哈哈哈哈哈哈哈哈</div>
+          <a href="#">查看详情</a>
+        </div>
+      </div>
+
+      <div class="mincard card-2">
+        <div class="img">
+          <img src="../images/04.avif" alt="">
+        </div>
+        <div class="content">
+          <div class="title">女帝</div>
+          <div class="text">红红火火恍恍
+            惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+          <a href="#">查看详情</a>
+        </div>
+      </div>
+
+      <div class="mincard card-3">
+        <div class="img">
+          <img src="../images/05.png" alt="">
+        </div>
+        <div class="content">
+          <div class="title">女帝</div>
+          <div class="text">红红火火恍恍
+            惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+          <a href="#">查看详情</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="remin">
+      <!-- 取名name表示这三个按钮属于一组，和样式无关 -->
+      <input type="radio" name="reselect" id="reslide_1" checked hidden>
+      <input type="radio" name="reselect" id="reslide_2" hidden>
+      <input type="radio" name="reselect" id="reslide_3" hidden>
+
+      <div class="reslider">
+        <!-- 类似创建三个按钮的分身，然后把真身隐藏，因为太丑了，但操作互通 -->
+        <!-- 用for元素与按钮联系for的值因为按钮id的值 -->
+        <label for="reslide_1" class="reslide reslide-1"></label>
+        <label for="reslide_2" class="reslide reslide-2"></label>
+        <label for="reslide_3" class="reslide reslide-3"></label>
+      </div>
+
+      <div class="remincard recard-1">
+        <div class="reimg">
+          <img src="../images/01.avif" alt="">
+        </div>
+        <div class="recontent">
+          <div class="retitle">女帝</div>
+          <div class="retext">红红火火恍恍
+            惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈hhhhhhh哈哈哈哈哈哈哈哈</div>
+          <a href="#">查看详情</a>
+        </div>
+      </div>
+
+      <div class="remincard recard-2">
+        <div class="reimg">
+          <img src="../images/04.avif" alt="">
+        </div>
+        <div class="recontent">
+          <div class="retitle">女帝</div>
+          <div class="retext">红红火火恍恍
+            惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+          <a href="#">查看详情</a>
+        </div>
+      </div>
+
+      <div class="remincard recard-3">
+        <div class="reimg">
+          <img src="../images/05.png" alt="">
+        </div>
+        <div class="recontent">
+          <div class="retitle">女帝</div>
+          <div class="retext">红红火火恍恍
+            惚惚哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+          <a href="#">查看详情</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- 结束 -->
+  <div class="max">
+
+    <div class="card" id="oo1">
+      <div class="photo">
+        <img src="../images/01.avif" alt="">
+      </div>
+      <h1>九歌|自动作诗</h1>
+      <h2>呵呵呵呵呵</h2>
+      <p>哈哈哈哈哈11111111111111111111111111111111111111111zzzzzzzzzzzzzzzzz</p>
+      <a href="#">learn more</a>
+    </div>
+
+    <div class="card" id="oo2">
+      <div class="photo">
+        <img src="../images/01.avif" alt="">
+      </div>
+      <h1>九歌|自动作诗</h1>
+      <h2>呵呵呵呵呵</h2>
+      <p>哈哈哈哈哈</p>
+      <a href="#">learn more</a>
+    </div>
+
+    <div class="card" id="oo3">
+      <div class="photo">
+        <img src="../images/01.avif" alt="">
+      </div>
+      <h1>九歌|自动作诗</h1>
+      <h2>呵呵呵呵呵</h2>
+      <p>哈哈哈哈哈</p>
+      <a href="#">learn more</a>
+    </div>
+  </div>
+
+  <div class="new">
+    <h4>News</h4>
+    <h1>最新动态</h1>
+  </div>
+
+  <div class="new-text">
+    <div class="iconfont icon-zuojiantou" id="zuojiantou"></div>
+    <a href="">
+      <h3>OpenKE:知识图谱表示学习工具包</h3>
+    </a>
+    <a href="">
+      <h3>THUMT:神经机器翻译工具包</h3>
+    </a>
+    <a href="">
+      <h3>OpenKE: THULAC:一个高效的中文词法分析工具包</h3>
+    </a>
+    <a href="">
+      <h3>OPENNRE：可一键运行的开源关系抽取工具包</h3>
+    </a>
+    <div class="iconfont icon-youjiantou" id="youjiantou"></div>
+  </div>
+
+  <!-- 身体部分结束 -->
+
+  <!-- footer部分开始 -->
+  <div class="footer">
+    <div class="left">
+      <div class="left-top">
+        <img src="../images/hsdlogo.png">
+      </div>
+
+      <div class="left-bottom">
+        <p class="iconfont icon-dizhi" id="dizhi">联系我们</p>
+        <h4>地址：河南省新乡市建设东路46号 邮编：453007</h4>
+      </div>
+    </div>
+    <!-- 底部右边开始 -->
+    <div class="right">
+      <div class="right-top">
+        <a href="https://www.zhihu.com/search?type=content&q=%E6%B2%B3%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6">
+          <div class="iconfont icon-zhihu" id="zhihu"></div>
+        </a>
+        <a
+          href="https://www.douyin.com/root/search/%E6%B2%B3%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6?aid=2a49fb77-2053-4d19-98be-6869206f5cf6&type=general">
+          <div class="iconfont icon-douyin" id="douyin"></div>
+        </a>
+        <a
+          href="https://search.bilibili.com/all?keyword=%E6%B2%B3%E5%8D%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6&from_source=webtop_search&spm_id_from=333.1007&search_source=2">
+          <div class="iconfont icon-bilibili" id="bilibili"></div>
+        </a>
+        <a href="https://mail.163.com/">
+          <div class="iconfont icon-youxiang" id="youxiang"></div>
+        </a>
+      </div>
+
+      <div class="right-bottom">
+        <img src="../images/hsd.png" width="200px" ; height="200px">
+      </div>
+      <!-- 底部右边结束 -->
+    </div>
+  </div>
+
+
+
+  <!-- footer部分结束 -->
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* 基础表格样式 */
+    .stripe-table {
+      width: 60%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      table-layout: fixed;
+    }
+
+    /* 行样式 */
+    .stripe-table tr {
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
+    }
+
+    /* 隔行变色 */
+    .stripe-table tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    /* 单元格基础样式 */
+    .stripe-table td {
+      padding: 16px 20px;
+      vertical-align: middle;
+      text-align: left;
+      /* 强制左对齐 */
+      border: none;
+    }
+
+    /* 内容容器-核心修正 */
+    .content-cell {
+      /* 多行截断三要素 */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+
+      /* 尺寸控制 */
+      max-height: calc(1.5em * 3 + 4px);
+      /* 行高×行数 + 修正值 */
+      line-height: 1.5em;
+
+      /* 溢出控制 */
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+
+      /* 排版修正 */
+      word-break: break-word;
+      padding: 0 !important;
+      /* 清除内边距干扰 */
+      /* margin: 80px 400px 80px 0px; */
+      margin: 80px;
+    }
+
+    /* 图片列样式 */
+    .img-cell {
+      width: 80px;
+      padding: 10px 120px 10px 10px !important;
+      text-align: center;
+    }
+
+    .stripe-table img {
+      width: 60px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+      vertical-align: middle;
+
+    }
+
+    /* 悬停效果 */
+    .stripe-table tr:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(28, 126, 214, 0.2);
+      background-color: #e6f7ff !important;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="stripe-table">
+    <tbody>
+      <!-- 长文本测试 -->
+      <!-- <tr>
+        <td class="img-cell">
+          <img src="../images/01.avif" style="width: 400px;height: 500px;" alt="示例图片">
+        </td>
+        <td class="content-cell">
+          这是一段超长文本测试内容，当文本超过三行时应该正确显示省略号。这是第四行不应该显示的文本内容，这是第五行内容，这些都应该被隐藏。这是第六行内容，保证所有超出内容不可见。继续添加更多文本以确保达到三行截断效果。这是一段超长文本测试内容，当文本超过三行时应该正确显示省略号。这是第四行不应该显示的文本内容，这是第五行内容，这些都应该被隐藏。这是第六行内容，保证所有超出内容不可见。继续添加更多文本以确保达到三行截断效
+        </td>
+      </tr> -->
+
+      <!-- 短文本测试 -->
+      <!-- <tr>
+        <td class="img-cell">
+          <img src="../images/01.avif" alt="示例图片">
+        </td>
+        <td class="content-cell">
+          短文本对齐测试
+        </td>
+      </tr> -->
+
+      <!-- 精确三行测试 -->
+      <!-- <tr>
+        <td class="img-cell">
+          <img src="https://via.placeholder.com/60" alt="示例图片">
+        </td>
+        <td class="content-cell">
+          这是刚好三行的文本内容，第一行文字，第二行继续，第三行结束。不需要显示省略号。
+        </td>
+      </tr> -->
+    </tbody>
+  </table>
+
+  <div class="pages">
+    <ul></ul>
+  </div>
+
+
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/news.js"></script>
+</body>
+
+</html>

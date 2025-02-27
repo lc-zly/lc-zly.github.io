@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    /* 基础表格样式 */
+    .stripe-table {
+      width: 60%;
+      border-collapse: separate;
+      /* 改为separate实现行间距 */
+      border-spacing: 0 6px;
+      /* 垂直方向6px行间距 */
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      table-layout: fixed;
+    }
+
+    /* 移除原有边框样式 */
+    .stripe-table tr {
+
+      height: 120px;
+      /* 固定行高 */
+      /* display: table-row; */
+      /* 保持表格布局特性 */
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      /* 用阴影替代边框增加质感 */
+    }
+
+
+    /* 隔行变色 */
+    .stripe-table tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    .stripe-table tr:nth-child(odd) {
+      background-color: white;
+    }
+
+    /* 鼠标悬停效果 */
+    .stripe-table tr:hover {
+      box-shadow: 0 2px 6px rgba(28, 126, 214, 0.2);
+      transform: translateY(-1px);
+      /* 添加轻微浮动效果 */
+      transition: all 0.3s ease;
+      background-color: #e6f7ff !important;
+    }
+
+    .stripe-table td {
+
+      height: 100%;
+      /* 继承行高 */
+      padding: 50px;
+      box-sizing: border-box;
+      /* 包含padding在高度内 */
+      /* overflow: hidden; */
+      /* 隐藏超出内容 */
+      /* display: table-cell; */
+      display: flex !important;
+      /* 保持表格特性 */
+      /* vertical-align: middle; */
+      align-items: center !important;
+      /* 垂直居中 */
+      line-height: 1.4;
+      max-height: 120px;
+      /* 双重保障 */
+
+      /* 文字截断优化 */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      /* 最大显示3行 */
+    }
+
+
+
+    #tableBody a {
+      text-decoration: none;
+      color: black;
+    }
+
+    /* 移除原有边框样式 */
+    .stripe-table tr {
+      background: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      /* 用阴影替代边框增加质感 */
+    }
+
+    .stripe-table tr:last-child {
+      border-bottom: none;
+    }
+
+    /* 移除最后一行底部间距 */
+    .stripe-table tbody {
+      padding-bottom: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 表格容器 -->
+  <table class="stripe-table" id="myTable">
+    <tbody id="tableBody">
+      <!-- 动态内容将插入到这里 -->
+    </tbody>
+  </table>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/project.js"></script>
+</body>
+
+</html>
